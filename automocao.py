@@ -8,7 +8,7 @@ engine = pyttsx3.init()
 
 with sr.Microphone() as source: 
     engine.say("Olá, qual jogo você gostaria de jogar?")
-    engine.say("1 -resident evil, 2- counter strinke, 3- valorant ")
+    engine.say("1- resident evil, 2- counter strinke, 3- valorant ")
     engine.runAndWait()
     
     while True:
@@ -17,20 +17,20 @@ with sr.Microphone() as source:
             text = r.recognize_google(audio, language='pt-BR')
             print("Você disse: {}".format(text))
             if '1' in text.lower():
-                jogo_path2 = r"C:/Users/Kelvin/Desktop/jogos/Resident Evil 2.url"
+                jogo_path2 = r""
                 os.startfile(jogo_path2)
                 engine.say('Jogo aberto, divirta-se!')
                 engine.runAndWait()
                 
             elif '2' in text.lower():
-                jogo_path = r"C:/Users/Kelvin/Desktop/jogos/CsGo.url"
+                jogo_path = r""
                 os.startfile(jogo_path)
                 print("Jogo aberto!")
                 engine.say("Jogo aberto!")
                 engine.runAndWait()
 
             elif '3' in text.lower():
-                jogo_path3 = r"C:/Users/Kelvin/Desktop/jogos/VALORANT.lnk"
+                jogo_path3 = r""
                 os.startfile(jogo_path3)
                 engine.say('Jogo aberto, divirta-se!')
                 engine.runAndWait()
